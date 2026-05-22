@@ -624,8 +624,10 @@
       fd.append('Event Details / Special Requests', document.getElementById('notes').value || 'None');
 
       const res = await fetch('https://formspree.io/f/xqejbqnq', {
-        method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
+        method: 'POST', body: fd
       });
+
+      const data = await res.json();
 
       if (res.ok) {
         document.getElementById('confirmEmail').textContent = document.getElementById('email').value;
