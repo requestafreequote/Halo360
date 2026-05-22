@@ -623,7 +623,7 @@
       fd.append('How They Heard', document.getElementById('source').value || 'Not specified');
       fd.append('Event Details / Special Requests', document.getElementById('notes').value || 'None');
 
-      const res = await fetch('https://formspree.io/f/https://formspree.io/f/xqejbqnq', {
+      const res = await fetch('https://formspree.io/f/xqejbqnq', {
         method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
       });
 
